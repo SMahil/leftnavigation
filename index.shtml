@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Left Hand Navigation</title>
+    <link href="http://www.patternfly.org/components/patternfly/dist/css/patternfly.min.css" rel="stylesheet" />
+    <link href="http://www.patternfly.org/components/patternfly/dist/css/patternfly-additions.min.css" rel="stylesheet" />
+    <link href="http://www.patternfly.org/components/patternfly/dist/css/patternfly-site.less" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style type="text/css">
+      .fa.fa-close{
+        z-index: 9999;
+      }
+    </style>
+  </head>
+  <body class="left-nav">
+    <main class="page-wrap">
+      <div class="navbar margin-0">
+        <div class="navbar-inner">
+          <div class="dashboard-icon">
+            <span class="pficon pficon-home hidden-xs dashboard-icon-1"></span>
+            <span class="fa fa-bars hidden-sm hidden-md hidden-lg dashboard-icon-2"></span>
+            <ul class="secondary-menu space-dropdown-menu">
+              <li class="space-dropdown-menu-item">
+                <a>
+                  <div class="user-dropdown__user-icon user-avatar-icon pull-left">
+                    <img class="icon-user" src="https://www.gravatar.com/avatar/98669ddf430e4036c17d8fd5acff84f5.jpg">
+                  </div>
+                  <span class="pull-right fa fa-close hidden-sm hidden-md hidden-lg" id="hideLeftNav"
+                    style="margin-right:-10px;"></span>
+                  <div class="" style="padding-left:30px; padding-right:10px;">
+                    <span class="padding-left-10">USERNAME</span>
+                    <p class="margin-0" style="word-break: break-all;">
+                      email@address.comemail@address.com
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="space-dropdown-menu-item">
+                <a>
+                  <p class="dib margin-0">My Dashboard</p>
+                </a>
+              </li>
+              <li class="space-dropdown-menu-item click-inner-menu hidden-sm hidden-md hidden-lg">
+                <a class="" id="clickSpace">
+                  <p class="dib margin-0">Recent Spaces</p>
+                  <span class="pull-right hidden-sm hidden-md hidden-lg">
+                    <span class="fa fa-angle-right"></span>
+                  </span>
+                </a>
+                <div class="inner-menu spaceList">
+                  <ul class="space-dropdown-menu-list margin-bottom-10">
+                    <li>
+                      <a>
+                        <span class="pull-left">
+                          <span class="fa fa-angle-left"></span>
+                        </span>
+                        <p class="dib margin-0">Recent Spaces</p>
+                        <span class="pull-right" id="closeSecMenu">
+                          <span class="fa fa-close"></span>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="space-dropdown-menu-item">
+                      <a>
+                        <span class="pull-left">
+                          <i class="pficon pficon-add-circle-o"></i>
+                        </span>
+                        <p class="dib margin-0">Create Space</p>
+                      </a>
+                    </li>
+                    <li class="space-dropdown-menu-list-item">
+                      <ul class="space-dropdown-menu-list">
+                        <li>
+                          <a id="openSpaceList">
+                            <!--#include virtual="space.html" --> 
+                            <span class="pull-right" id="closeSecMenu">
+                              <span class="fa fa-angle-right"></span>
+                            </span>
+                          </a>
+                          <div class="inner-menu-2 spaceInnerList">
+                            <ul class="space-dropdown-menu-list margin-bottom-10">
+                              <li class="space-dropdown-menu-item">
+                                <a>
+                                  <span class="pull-left">
+                                    <span class="fa fa-angle-left"></span>
+                                  </span>
+                                  <!--#include virtual="space.html" --> 
+                                  <span class="pull-right" id="closeMenu3">
+                                    <span class="fa fa-close"></span>
+                                  </span>
+                                </a>
+                              </li>
+                              <li class="space-dropdown-menu-item">
+                                <a>
+                                  <p class="dib margin-0">Space Settings</p>
+                                  <span class="pull-left">
+                                    <span class="fa fa-cog"></span>
+                                  </span>
+                                </a>
+                              </li>
+                              <li class="space-dropdown-menu-item">
+                                <!--#include virtual="analyze.html" --> 
+                              </li>
+                              <li class="space-dropdown-menu-item">
+                                <!--#include virtual="plan.html" --> 
+                              </li>
+                              <li class="space-dropdown-menu-item">
+                                <!--#include virtual="create.html" --> 
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li>
+                          <a id="openSpaceList2">
+                            <!--#include virtual="space.html" --> 
+                            <span class="pull-right" id="closeSecMenu">
+                              <span class="fa fa-angle-right"></span>
+                            </span>
+                          </a>
+                          <div class="inner-menu-2 spaceInnerList2">
+                            <ul class="space-dropdown-menu-list margin-bottom-10">
+                              <li class="space-dropdown-menu-item">
+                                <a>
+                                  <span class="pull-left">
+                                    <span class="fa fa-angle-left"></span>
+                                  </span>
+                                  <!--#include virtual="space.html" --> 
+                                  <span class="pull-right" id="closeMenu3">
+                                    <span class="fa fa-close"></span>
+                                  </span>
+                                </a>
+                              </li>
+                              <li class="space-dropdown-menu-item">
+                                <a>
+                                  <p class="dib margin-0">Space Settings</p>
+                                  <span class="pull-left">
+                                    <span class="fa fa-cog"></span>
+                                  </span>
+                                </a>
+                              </li>
+                              <li class="space-dropdown-menu-item">
+                                <a id="openSpaceList3">
+                                  <p class="dib margin-0">Analyze</p>
+                                  <span class="pull-left">
+                                    <span class="fa fa-dashboard"></span>
+                                  </span>
+                                  <span class="pull-right">
+                                    <span class="fa fa-angle-right"></span>
+                                  </span>
+                                </a>
+                                <div class="inner-menu-2 spaceInnerList3">
+                                  <ul class="space-dropdown-menu-list margin-bottom-10">
+                                    <li>
+                                      <!--#include virtual="analyze.html" -->
+                                      <span class="pull-right closeinnerMenu3" id="closeMenu4">
+                                        <span class="fa fa-close"></span>
+                                      </span>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+                              <li class="space-dropdown-menu-item">
+                                <a id="openSpaceList4">
+                                  <p class="dib margin-0">Plan</p>
+                                  <span class="pull-left">
+                                    <span class="fa fa-table"></span>
+                                  </span>
+                                  <span class="pull-right">
+                                    <span class="fa fa-angle-right"></span>
+                                  </span>
+                                </a>
+                                <div class="inner-menu-2 spaceInnerList4">
+                                  <ul class="space-dropdown-menu-list margin-bottom-10">
+                                    <li>
+                                      <!--#include virtual="plan.html" -->
+                                      <span class="pull-right closeinnerMenu3" id="closeMenu5">
+                                        <span class="fa fa-close"></span>
+                                      </span>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+                              <li class="space-dropdown-menu-item">
+                                <a>
+                                  <p class="dib margin-0">Create</p>
+                                  <span class="pull-left">
+                                    <span class="pficon pficon-add-circle-o"></span>
+                                  </span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li>
+                          <a>
+                            <!--#include virtual="space.html" --> 
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="space-dropdown-menu-item">
+                      <a>
+                        <span class="pull-left">
+                          <i class="fa fa-th-large"></i>
+                        </span>
+                        <p class="dib margin-0">View All Spaces</p>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <!-- My workitems -->
+              <li class="space-dropdown-menu-item click-inner-menu">
+                <a class="hidden-sm hidden-md hidden-lg" id="clickWorkitem">
+                  <p class="dib margin-0">My WorkItems</p>
+                  <span class="pull-right hidden-sm hidden-md hidden-lg">
+                    <span class="fa fa-angle-right"></span>
+                  </span>
+                </a>
+                <a class="hidden-xs">
+                  <p class="dib margin-0">My WorkItems</p>
+                </a>
+                <div class="inner-menu">
+                  <ul class="space-dropdown-menu-list border-0 margin-bottom-10">
+                    <li class="space-dropdown-menu-list-item  hidden-sm hidden-md hidden-lg">
+                      <a>
+                        <span class="pull-left">
+                          <span class="fa fa-angle-left"></span>
+                        </span>
+                        <p class="dib margin-0">My WorkItems</p>
+                        <span class="pull-right" id="closeSecMenu">
+                          <span class="fa fa-close"></span>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="space-dropdown-menu-list-item">
+                      <a id="openSpace" class=" hidden-sm hidden-md hidden-lg">
+                      <!--#include virtual="space.html" --> 
+                        <span class="pull-right" id="closeSecMenu">
+                          <span class="fa fa-angle-right"></span>
+                        </span>
+                      </a>
+                      <div class="inner-menu-2">
+                        <ul class="space-dropdown-menu-list border-0">
+                          <li class="space-dropdown-menu-list-item  hidden-sm hidden-md hidden-lg">
+                            <a>
+                              <span class="pull-left">
+                                <span class="fa fa-angle-left"></span>
+                              </span>
+                              <p class="dib margin-0">My WorkItems</p>
+                              <span class="pull-right" id="closeMenu3">
+                                <span class="fa fa-close"></span>
+                              </span>
+                            </a>
+                          </li>
+                          <li class="space-dropdown-menu-item">
+                            <ul class="space-dropdown-menu-list margin-top-10 margin-bottom-10 border-0">
+                              <li class="space-dropdown-menu-list-item">
+                                <a>
+                                <!--#include virtual="workitems.html" --> 
+                                </a>
+                              </li>
+                              <li class="space-dropdown-menu-list-item">
+                                <a>
+                                <!--#include virtual="workitems.html" --> 
+                                </a>
+                              </li>
+                              <li class="space-dropdown-menu-list-item">
+                                <a>
+                                <!--#include virtual="workitems.html" --> 
+                                </a>
+                              </li>
+                              <li class="space-dropdown-menu-list-item">
+                                <a>
+                                <!--#include virtual="workitems.html" --> 
+                                </a>
+                              </li>
+                              <li class="space-dropdown-menu-list-item">
+                                <a>
+                                <!--#include virtual="workitems.html" --> 
+                                </a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="space-dropdown-menu-list-item  hidden-sm hidden-md hidden-lg">
+                      <a>
+                        <!--#include virtual="space.html" --> 
+                      </a>
+                    </li>
+                    <li class="space-dropdown-menu-list-item  hidden-sm hidden-md hidden-lg">
+                      <a>
+                        <!--#include virtual="space.html" --> 
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="space-dropdown-menu-item">
+                <a>
+                  <p class="dib margin-0">My Settings</p>
+                  <span class="pull-right">
+                    <span class="fa fa-angle-right"></span>
+                  </span>
+                </a>
+              </li>
+              <li class="space-dropdown-menu-item">
+                <a>
+                  <p class="dib margin-0">Help</p>
+                  <span class="pull-right">
+                    <span class="fa fa-angle-right"></span>
+                  </span>
+                </a>
+              </li>
+              <li class="space-dropdown-menu-item">
+                <a>
+                  <p class="dib margin-0">Sign Out</p>
+                  <span class="pull-right">
+                    <span class="fa fa-angle-right"></span>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="navbar-outer  hidden-xs">
+            <ul class="nav navbar-nav navbar-left">
+              <li class="dropdown space-dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" id="space-dropdown-menu1">
+                  <p class="dib margin-0">Spaces</p>
+                  <span class="pull-right">
+                    <span class="fa fa-angle-right"></span>
+                  </span>
+                </a>
+                <ul class="dropdown-menu space-dropdown-menu" role="menu" 
+                  aria-labelledby="space-dropdown-menu1">
+                  <li class="space-dropdown-menu-item">
+                    <a>
+                      <span class="pull-left">
+                        <i class="pficon pficon-add-circle-o"></i>
+                      </span>
+                      <p class="dib margin-0">Create Space</p>
+                    </a>
+                  </li>
+                  <li class="space-dropdown-menu-item">
+                    <h3 class="space-dropdown-menu-item__hdr">RECENT SPACES</h3>
+                    <ul class="space-dropdown-menu-list border-0">
+                      <li class="space-dropdown-menu-list-item" id="selectedSpace">
+                        <a>
+                          <!--#include virtual="space.html" --> 
+                        </a>
+                      </li>
+                      <li class="space-dropdown-menu-list-item">
+                        <a>
+                          <!--#include virtual="space.html" --> 
+                        </a>
+                      </li>
+                      <li class="space-dropdown-menu-list-item">
+                        <a>
+                          <!--#include virtual="space.html" --> 
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="space-dropdown-menu-item">
+                    <a>
+                      <span class="pull-left">
+                        <i class="fa fa-th-large"></i>
+                      </span>
+                      <p class="dib margin-0">View All Spaces</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right margin-0">
+              <li class="border-right">
+                <a>
+                  <i class="pficon pficon-ok"></i>
+                </a>
+              </li>
+              <li>  
+                <a class="">
+                  <i class="fa fa-search"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="page-sidebar sidebar hidden-xs">
+        <nav class="sidebar-menu">
+          <!-- sidebar tab 1-->
+          <div class="menu-1 hide" data-menuId="1" id="menu-1">
+            <span class="fa fa-dashboard"></span>
+            <ul class="secondary-menu space-dropdown-menu">
+              <li class="space-dropdown-menu-item">
+                <ul class="space-dropdown-menu-list">
+                  <li class="space-dropdown-menu-list-item">
+                    <a>
+                      <!--#include virtual="space.html" --> 
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="space-dropdown-menu-item">
+              <!--#include virtual="analyze.html" -->
+              </li>
+            </ul>
+          </div>
+          <!-- sidebar tab 2 -->
+          <div class="menu-1 hide" data-menuId="2" id="menu-2">
+            <span class="fa fa-table"></span>
+            <ul class="secondary-menu space-dropdown-menu">
+              <li class="space-dropdown-menu-item">
+                <ul class="space-dropdown-menu-list">
+                  <li class="space-dropdown-menu-list-item">
+                    <a>
+                      <!--#include virtual="space.html" --> 
+                      <div class="pull-right padding-top-10">
+                        <i class="fa fa-cog"></i>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="space-dropdown-menu-item">
+              <!--#include virtual="plan.html" -->
+              </li>
+            </ul>
+          </div>
+          <!-- sidebar tab 3-->
+          <div class="menu-1 hide" data-menuId="3" id="menu-3">
+            <span class="pficon pficon-add-circle-o"></span>
+            <ul class="secondary-menu space-dropdown-menu">
+              <li class="space-dropdown-menu-item">
+                <ul class="space-dropdown-menu-list">
+                  <li class="space-dropdown-menu-list-item">
+                    <a>
+                      <!--#include virtual="space.html" --> 
+                      <div class="pull-right padding-top-10">
+                        <i class="fa fa-cog"></i>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="space-dropdown-menu-item">
+              <!--#include virtual="create.html" -->
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="page-inner">
+       data
+      </div>
+    </main>
+  </body>
+  <script>
+    $(window).on('resize', function(){
+      var $containerWidth = $(window).width();
+      if ($containerWidth >= 767) {
+        $('.inner-menu').css({
+          left: '0'
+        });
+        $('.inner-menu-2').css({
+          left: '0'
+        });
+      }
+      if ($containerWidth <= 767) {
+        $('.secondary-menu').css({
+          display: 'none'
+        });
+        $('.inner-menu').css({
+          left: '-280px'
+        });
+        $('.inner-menu-2').css({
+          left: '-280px'
+        });
+      }
+    });
+    $(document).ready(function(){
+      $('.dashboard-icon-1').click(function(){
+        $('.secondary-menu').toggle();
+      });
+      $('.dashboard-icon-2').click(function(){
+        $('.secondary-menu').toggle();
+      });
+      $('#hideLeftNav').click(function(){
+        $('.secondary-menu').hide();
+      });
+      $('#clickWorkitem').click(function(){
+        $('.inner-menu').animate({
+          left: '0'
+        },10);
+      });
+      
+      $('#openSpace').click(function(){
+        $('.inner-menu-2').animate({
+          left: '0'
+        },10);
+      });
+      $('#closeSecMenu > span.fa').click(function(){
+        $('.inner-menu').animate({
+          left: '-280px'
+        },10);
+      });
+      $('#closeMenu3 > span.fa').click(function(){
+        $('.inner-menu-2').animate({
+          left: '-280px'
+        },10);
+      });
+      $('#closeMenu4 > span.fa').click(function(){
+        $('.inner-menu-2.spaceInnerList3').animate({
+          left: '-280px'
+        },10);
+      });
+      $('#closeMenu5 > span.fa').click(function(){
+        $('.inner-menu-2.spaceInnerList4').animate({
+          left: '-280px'
+        },10);
+      });
+      $('#selectedSpace').click(function(){
+        $('.menu-1').toggleClass('show');
+      });
+      // $('.menu-1').click(function(){
+      //   $('.menu-1 .secondary-menu').hide();
+      //   var menuId = $(this).data("menuId");
+      //   alert(menuId);
+      //   $('.menu-1[data-menuId="+menuId+"]').show();
+      // });
+      $('#menu-1').click(function(){
+        $('#menu-2 .secondary-menu').hide();
+        $('#menu-3 .secondary-menu').hide();
+        $('#menu-1 .secondary-menu').show();
+      });
+      $('#menu-2').click(function(){
+        $('#menu-1 .secondary-menu').hide();
+        $('#menu-3 .secondary-menu').hide();
+        $('#menu-2 .secondary-menu').show();
+      });
+      $('#menu-3').click(function(){
+        $('#menu-2 .secondary-menu').hide();
+        $('#menu-1 .secondary-menu').hide();
+        $('#menu-3 .secondary-menu').show();
+      });
+
+      $('#clickSpace').click(function(){
+        $('.inner-menu.spaceList').animate({
+          left: '0'
+        },10);
+      });
+
+      $('#openSpaceList').click(function(){
+        $('.inner-menu-2.spaceInnerList').animate({
+          left: '0'
+        },10);
+      });
+      $('#openSpaceList2').click(function(){
+        $('.inner-menu-2.spaceInnerList2').animate({
+          left: '0'
+        },10);
+      });
+      $('#openSpaceList3').click(function(){
+        $('.inner-menu-2.spaceInnerList3').animate({
+          left: '0'
+        },10);
+      });
+      $('#openSpaceList4').click(function(){
+        $('.inner-menu-2.spaceInnerList4').animate({
+          left: '0'
+        },10);
+      });
+    });
+  </script>
+</html>
