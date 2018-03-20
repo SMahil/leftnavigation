@@ -1,6 +1,6 @@
 DirectoryIndex index.shtml index.html
 
-Options +Includes
-AddType text/html shtml
-AddHandler server-parsed shtml
+AddType text/html .shtml
+AddHandler server-parsed .html
+AddHandler server-parsed .shtml
 Options Indexes FollowSymLinks Includes
